@@ -1,0 +1,15 @@
+# 已封存：請改讀正式設計規範
+
+此檔曾作為可直接轉貼的前端設計指南，內容已與正式 Markdown 規範重複，且包含舊版 Header、MemberNav 與元件實作狀態。為避免規格分歧，不再維護此檔。
+
+前端設計與實作請依下列閱讀順序：
+
+1. [`frontend-task-rules.md`](frontend-task-rules.md)
+2. [`design-system.md`](design-system.md)
+3. [`color-tokens.md`](color-tokens.md)
+4. [`typography-spacing.md`](typography-spacing.md)
+5. [`component-spec.md`](component-spec.md)
+6. [`icon-resource-checklist.md`](icon-resource-checklist.md)
+7. [`page-implementation-rules.md`](page-implementation-rules.md)
+
+實作上的 CSS token 以 [`../../frontend/src/assets/styles/design-tokens.css`](../../frontend/src/assets/styles/design-tokens.css) 為準；設計稿與程式有衝突時，先提出差異，不直接自行改動共用 token 或 layout。

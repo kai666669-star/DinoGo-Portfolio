@@ -1,0 +1,16 @@
+services:
+  backend:
+    environment:
+      FRONTEND_BASE_URL: ${FRONTEND_BASE_URL:-http://localhost:8088}
+      PAYMENT_SIMULATION_ENABLED: ${PAYMENT_SIMULATION_ENABLED:-true}
+      PAYMENT_EXPIRY_ENABLED: "false"
+      SYSMSG_EMAIL_ENABLED: "false"
+      SYSMSG_RECONCILIATION_ENABLED: "false"
+      ECPAY_ENABLED: ${ECPAY_ENABLED:-false}
+      APP_AI_OPENAI_ENABLED: "false"
+
+  reverse-proxy:
+    environment:
+      SITE_ADDRESS: ":80"
+    ports:
+      - "127.0.0.1:8088:80"

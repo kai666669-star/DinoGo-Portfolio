@@ -1,0 +1,15 @@
+services:
+  # Server PC only: expose the existing shared SQL Server to the trusted LAN.
+  # MSSQL_BIND_IP must be the Server PC's private LAN address, never 0.0.0.0.
+  database:
+    ports:
+      - "${MSSQL_BIND_IP:?Set MSSQL_BIND_IP}:${MSSQL_HOST_PORT:-9434}:1433"
+    networks:
+      - data
+      - team-access
+
+networks:
+  # This non-internal bridge exists only in Team mode so Docker can publish
+  # SQL Server to the explicitly bound trusted-LAN host address.
+  team-access:
+    driver: bridge
