@@ -1,0 +1,35 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Java / Maven
+target/
+**/target/
+*.class
+
+# Node / Vue
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Logs and local files
+logs/
+*.log
+uploads/
+backups/
+*.bak
+
+# OS
+.DS_Store
+Thumbs.db
