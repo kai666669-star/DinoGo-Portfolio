@@ -1,0 +1,19 @@
+services:
+  database:
+    restart: unless-stopped
+
+  backend:
+    restart: unless-stopped
+    environment:
+      FRONTEND_BASE_URL: ${FRONTEND_BASE_URL:?Set FRONTEND_BASE_URL}
+
+  frontend:
+    restart: unless-stopped
+
+  reverse-proxy:
+    restart: unless-stopped
+    environment:
+      # Cloudflared connects to this loopback HTTP origin; Cloudflare terminates public TLS.
+      SITE_ADDRESS: ":80"
+    ports:
+      - "127.0.0.1:8088:80"

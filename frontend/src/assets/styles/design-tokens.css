@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap');
+
+:root {
+  --color-primary-50: #f2f3ef;
+  --color-primary-100: #e4e8df;
+  --color-primary-200: #ced8c8;
+  --color-primary-300: #b4c2ad;
+  --color-primary-400: #97a88f;
+  --color-primary-500: #7c9082;
+  --color-primary-600: #657a6d;
+  --color-primary-700: #526559;
+  --color-primary-800: #3f4e45;
+  --color-primary-900: #2e3a33;
+  --color-primary-950: #18201a;
+
+  --color-secondary-50: #fafaf8;
+  --color-secondary-100: #f4f2ed;
+  --color-secondary-200: #e8e6e1;
+  --color-secondary-300: #d8d3ca;
+  --color-secondary-400: #c3bcb0;
+  --color-secondary-500: #aa9f91;
+  --color-secondary-600: #8e8276;
+  --color-secondary-700: #72685f;
+  --color-secondary-800: #554c45;
+  --color-secondary-900: #362f2a;
+  --color-secondary-950: #211b17;
+
+  --color-tertiary-50: #f7f5e7;
+  --color-tertiary-100: #eeebd0;
+  --color-tertiary-200: #ddd292;
+  --color-tertiary-300: #cebf67;
+  --color-tertiary-400: #beab3b;
+  --color-tertiary-500: #a6902c;
+  --color-tertiary-600: #897621;
+  --color-tertiary-700: #726723;
+  --color-tertiary-800: #5c541d;
+  --color-tertiary-900: #4c4118;
+  --color-tertiary-950: #2b260d;
+
+  --color-surface: #ffffff;
+  --color-surface-soft: #fafaf8;
+  --color-bg: #f8f7f4;
+  --color-bg-muted: #f4f2ed;
+  --color-surface-400: #edebe6;
+  --color-border: #e8e6e1;
+  --color-border-strong: #d8d3ca;
+  --color-surface-700: #beb8ad;
+  --color-surface-800: #8f877d;
+  --color-surface-900: #5f5750;
+  --color-surface-950: #2a2622;
+
+  --color-text-50: #f7f8f7;
+  --color-text-100: #eef0ee;
+  --color-text-200: #d5d8d5;
+  --color-text-300: #b8bdb9;
+  --color-text-subtle: #8a8f88;
+  --color-text-muted: #66706a;
+  --color-text-600: #4e5853;
+  --color-text-700: #38423d;
+  --color-text-800: #2a332f;
+  --color-text: #1a1f2e;
+  --color-text-950: #0f141d;
+
+  --color-success-soft: #edf3ee;
+  --color-success-bg: #dde9df;
+  --color-success: #5f7b68;
+  --color-warning-soft: #f7f1e5;
+  --color-warning: #9a7b42;
+  --color-danger-soft: #fff0ee;
+  --color-danger: #c73e3a;
+  --color-info-soft: #eff3f7;
+  --color-info: #64748b;
+  --color-disabled-bg: #e8e6e1;
+  --color-disabled: #d5d3ce;
+
+  --color-primary: var(--color-primary-500);
+  --color-primary-hover: var(--color-primary-600);
+  --color-primary-active: var(--color-primary-700);
+  --color-primary-soft: var(--color-primary-100);
+  --color-primary-notice: #bfc9bb;
+
+  --font-heading: 'Noto Serif TC', serif;
+  --font-body: 'Noto Sans TC', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-md: 18px;
+  --font-size-lg: 22px;
+  --font-size-xl: 28px;
+  --font-size-2xl: 36px;
+  --font-size-3xl: 44px;
+  --line-height-base: 1.5;
+  --line-height-heading: 1.2;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 1px 2px rgba(26, 31, 46, 0.04);
+  --shadow-card: 0 4px 14px rgba(26, 31, 46, 0.06);
+  --shadow-focus: 0 0 0 3px rgba(124, 144, 130, 0.26);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: var(--line-height-base);
+}
+
+.dg-heading {
+  font-family: var(--font-heading);
+}
+
+.dg-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.dg-btn-primary {
+  background: var(--color-primary);
+  color: var(--color-surface);
+  border: 1px solid var(--color-primary);
+}
+
+.dg-btn-primary:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.dg-btn-outline {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+}
+
+.dg-focus-ring:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
